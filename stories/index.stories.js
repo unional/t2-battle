@@ -6,6 +6,8 @@ import { linkTo } from '@storybook/addon-links';
 import { withTests } from '@storybook/addon-jest';
 import { Button, Welcome } from '@storybook/react/demo';
 
+import results from '../.jest-test-results.json';
+
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
 storiesOf('Button', module)
@@ -19,5 +21,5 @@ storiesOf('Button', module)
   ));
 
 storiesOf('Timer', module)
-  .addDecorator(withTests({ results })('Timer'))
-  .add('This story shows test results of Timer', () => (<div>Jest results in storybook</div>))
+  .addDecorator(withTests({ results, filesExt: '((\\.spec)|(\\.test))\\.tsx?$' })('Timer'))
+  .add('Jest results', () => (<div>Jest results in storybook</div>))
