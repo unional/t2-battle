@@ -1,0 +1,9 @@
+{
+  "extends": ["tslint-config-unional/semi-standard", "tslint-react"],
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts"
+    ]
+  }
+}

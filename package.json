@@ -1,0 +1,35 @@
+{
+  "name": "t2-battle",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-scripts-ts": "2.15.1"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test",
+    "eject": "react-scripts-ts eject",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.4.1",
+    "@storybook/addon-jest": "^3.4.1",
+    "@storybook/addon-links": "^3.4.1",
+    "@storybook/addons": "^3.4.1",
+    "@storybook/react": "^3.4.1",
+    "@types/jest": "^22.2.3",
+    "@types/node": "^9.6.5",
+    "@types/react": "^16.3.10",
+    "@types/react-dom": "^16.0.5",
+    "@types/react-test-renderer": "^16.0.1",
+    "babel-core": "^6.26.0",
+    "babel-runtime": "^6.26.0",
+    "react-test-renderer": "^16.3.1",
+    "tslint-config-unional": "^0.9.3",
+    "typescript": "^2.8.1"
+  }
+}

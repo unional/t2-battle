@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 0:59 for 59 seconds 1`] = `
+<div
+  style={
+    Object {
+      "fontSize": "150px",
+    }
+  }
+>
+  0
+  :
+  59
+</div>
+`;
+
+exports[`renders 1:00 for 60 seconds 1`] = `
+<div
+  style={
+    Object {
+      "fontSize": "150px",
+    }
+  }
+>
+  1
+  :
+  0
+</div>
+`;
