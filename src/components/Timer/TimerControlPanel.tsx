@@ -9,8 +9,8 @@ import { TimerDisplay } from './TimerDisplay'
 export const TimerControlPanel = observer(({ game }: { game: GameController }) => (
   <div className='TimerControlPanel'>
     <TimerDisplay countDown={game.countDown} />
-    <Button hidden={game.running} onClick={game.start.bind(game)}>{'Start Game'}</Button>
-    <Button hidden={!game.running} onClick={game.pause.bind(game)}>{'Pause Game'}</Button>
-    <Button hidden={game.running} onClick={game.reset.bind(game)}>{'Reset Game'}</Button>
+    <Button hidden={game.running || game.countDown <= 0} onClick={game.start.bind(game)}>{'Start Game'}</Button>
+    <Button hidden={!game.running || game.countDown <= 0} onClick={game.pause.bind(game)}>{'Pause Game'}</Button>
+    <Button hidden={game.running || game.countDown > 0} onClick={game.reset.bind(game)}>{'Reset Game'}</Button>
   </div>
 ))

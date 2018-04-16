@@ -6,6 +6,7 @@ import { RefereeApp } from './RefereeApp'
 import { GameController } from '../Game';
 
 export function startRefereeApp() {
+  // TODO: get from localStorage instead of resetting on page load.
   const game = new GameController(15 * 60)
   autorun(() => {
     localStorage.setItem('game/countDown', game.countDown.toString())
