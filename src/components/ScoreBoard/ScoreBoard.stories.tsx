@@ -2,11 +2,10 @@
 import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 
-import { withTests } from '../withTests'
+import { withTests } from '../../withTests'
 import { ScoreBoard } from './ScoreBoard'
-import { Game } from '../game';
+import { GameController } from '../../Game'
 
 storiesOf('ScoreBoard', module)
   .addDecorator(withTests('ScoreBoard'))
-  .add('Start Game', () => (<ScoreBoard game={new Game()} />))
-  .add('Jest results', () => (<div>Jest results in storybook</div>))
+  .add('Start Game', () => (<ScoreBoard game={new GameController()} />))
