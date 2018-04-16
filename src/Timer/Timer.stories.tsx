@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import { withTests } from './withTests';
+import { withTests } from '../withTests';
 
 storiesOf('Timer', module)
   .addDecorator(withTests('Timer'))

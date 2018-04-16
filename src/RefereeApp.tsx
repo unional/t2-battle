@@ -1,26 +1,20 @@
 import * as React from 'react';
-import './App.css';
 
-import logo from './logo.svg';
+import './App.css';
 import { Timer } from './Timer/Timer';
+// import { ScoreBoard } from './ScoreBoard/ScoreBoard';
 import { Error } from './Error'
 
-class App extends React.Component {
+export class RefereeApp extends React.Component {
   public render() {
     if (!window.sessionStorage) {
       return (<Error message='This application requires Web Storage to work. Please use a compatible browser' />)
     }
 
     return (
-      <div className='App'>
-        <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <h1 className='App-title'>Welcome to React</h1>
-        </header>
+      <div className='RefereeApp'>
         <Timer countDown={100} />
       </div>
     );
   }
 }
-
-export default App;
