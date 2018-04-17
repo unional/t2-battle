@@ -46,7 +46,7 @@ function resetButton(panel): enzyme.ShallowWrapper<{
 
 function setup(getGame = () => new GameController()) {
   const game = getGame()
-  const story = <TimerControlPanel game={game} />
+  const story = <TimerControlPanel timer={game} />
   return { game, story }
 }
 

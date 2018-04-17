@@ -3,14 +3,20 @@ import { observer } from 'mobx-react'
 
 import './TimerControlPanel.css'
 import { Button } from '../Button'
-import { GameController } from '../../Game';
 import { TimerDisplay } from './TimerDisplay'
 
-export const TimerControlPanel = observer(({ game }: { game: GameController }) => (
+export interface Timer {
+  countDown: number,
+  running: boolean
+  start(): void,
+  pause(): void,
+  reset(): void,
+}
+export const TimerControlPanel = observer(({ timer }: { timer: Timer }) => (
   <div className='TimerControlPanel'>
-    <TimerDisplay countDown={game.countDown} />
-    <Button hidden={game.running || game.countDown <= 0} onClick={game.start.bind(game)}>{'Start Game'}</Button>
-    <Button hidden={!game.running || game.countDown <= 0} onClick={game.pause.bind(game)}>{'Pause Game'}</Button>
-    <Button hidden={game.running || game.countDown > 0} onClick={game.reset.bind(game)}>{'Reset Game'}</Button>
+    <TimerDisplay countDown={timer.countDown} />
+    <Button hidden={timer.running || timer.countDown <= 0} onClick={timer.start.bind(timer)}>{'Start Game'}</Button>
+    <Button hidden={!timer.running || timer.countDown <= 0} onClick={timer.pause.bind(timer)}>{'Pause Game'}</Button>
+    <Button hidden={timer.running || timer.countDown > 0} onClick={timer.reset.bind(timer)}>{'Reset Game'}</Button>
   </div>
 ))

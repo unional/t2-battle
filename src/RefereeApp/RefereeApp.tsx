@@ -10,7 +10,7 @@ export class RefereeApp extends React.Component<{ game: GameController }, {}> {
   public render() {
     return (
       <div className='App'>
-        <TimerControlPanel game={this.props.game} />
+        <TimerControlPanel timer={this.props.game} />
       </div>
     );
   }

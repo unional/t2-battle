@@ -8,4 +8,4 @@ import { GameController } from '../../Game'
 
 storiesOf('TimerControlPanel', module)
   .addDecorator(withTests('TimerControlPanel'))
-  .add('Start Game', () => (<TimerControlPanel game={new GameController()} />))
+  .add('New Timer', () => (<TimerControlPanel timer={new GameController()} />))
