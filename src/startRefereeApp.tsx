@@ -2,18 +2,22 @@ import { autorun } from 'mobx'
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { RefereeApp } from './RefereeApp'
-import { GameController } from '../Game';
-
+import { RefereePage } from './RefereePage'
+import { GameController } from './Game';
+function loadGame() {
+  const game = new GameController()
+  game.countDown = parseInt(localStorage.getItem('game/countDown') || '0', 10)
+  return game
+}
 export function startRefereeApp() {
-  // TODO: get from localStorage instead of resetting on page load.
-  const game = new GameController(15 * 60)
+  const game = loadGame()
+
   autorun(() => {
     localStorage.setItem('game/countDown', game.countDown.toString())
     localStorage.setItem('game/running', game.running.toString())
   })
   ReactDOM.render(
-    <RefereeApp game={game} />,
+    <RefereePage game={game} />,
     document.getElementById('root') as HTMLElement
   );
 }

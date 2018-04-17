@@ -7,7 +7,7 @@ import { observer } from 'mobx-react';
 import { Game } from '../Game';
 
 @observer
-export class MatchApp extends React.Component<{ game: Game }, {}> {
+export class MatchPage extends React.Component<{ game: Game }, {}> {
   public render() {
     return (
       <div className='App'>

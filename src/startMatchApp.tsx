@@ -3,8 +3,8 @@ import * as localStorage from 'mobx-localstorage'
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { Game } from '../Game';
-import { MatchApp } from './App'
+import { Game } from './Game';
+import { MatchPage } from './MatchPage'
 
 export function startMatchApp() {
   const game = new Game()
@@ -14,7 +14,7 @@ export function startMatchApp() {
   })
 
   ReactDOM.render(
-    <MatchApp game={game} />,
+    <MatchPage game={game} />,
     document.getElementById('root') as HTMLElement
   );
 }

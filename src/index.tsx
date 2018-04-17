@@ -3,8 +3,8 @@ import * as ReactDOM from 'react-dom';
 
 import './index.css';
 import { Error } from './components/Error';
-import { startMatchApp } from './MatchApp';
-import { startRefereeApp } from './RefereeApp';
+import { startMatchApp } from './startMatchApp';
+import { startRefereeApp } from './startRefereeApp';
 import registerServiceWorker from './registerServiceWorker';
 
 if (!window.sessionStorage) {
