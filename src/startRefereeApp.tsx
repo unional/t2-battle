@@ -3,7 +3,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 import { RefereePage } from './RefereePage'
-import { GameController } from './Game';
+import { GameController } from './app';
 
 /**
  * This is the "main" logic of referee application.

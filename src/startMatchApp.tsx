@@ -3,7 +3,7 @@ import * as localStorage from 'mobx-localstorage'
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { Game } from './Game';
+import { Game } from './app';
 import { MatchPage } from './MatchPage'
 
 export function startMatchApp() {

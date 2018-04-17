@@ -2,7 +2,7 @@ import * as enzyme from 'enzyme'
 import * as React from 'react'
 
 import { ScoreBoard } from './ScoreBoard'
-import { GameController } from '../../Game'
+import { GameController } from '../../app'
 import { Button } from '../Button';
 
 test('Invoke start game', () => {

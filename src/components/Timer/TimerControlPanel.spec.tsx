@@ -3,7 +3,7 @@ import * as enzyme from 'enzyme'
 import * as React from 'react'
 
 import { TimerControlPanel } from './TimerControlPanel'
-import { GameController } from '../../Game'
+import { GameController } from '../../app'
 import { Button } from '../Button';
 
 it('starts with start shown, pause and reset hidden', () => {

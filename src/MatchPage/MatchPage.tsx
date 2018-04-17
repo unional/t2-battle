@@ -4,7 +4,7 @@ import logo from '../logo.svg';
 import { TimerDisplay } from '../components/Timer';
 import './App.css';
 import { observer } from 'mobx-react';
-import { Game } from '../Game';
+import { Game } from '../app';
 
 @observer
 export class MatchPage extends React.Component<{ game: Game }, {}> {

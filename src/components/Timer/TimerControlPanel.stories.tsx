@@ -4,7 +4,7 @@ import * as React from 'react'
 
 import { withTests } from '../../withTests'
 import { TimerControlPanel } from './TimerControlPanel'
-import { GameController } from '../../Game'
+import { GameController } from '../../app'
 
 storiesOf('TimerControlPanel', module)
   .addDecorator(withTests('TimerControlPanel'))

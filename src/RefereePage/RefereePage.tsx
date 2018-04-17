@@ -4,7 +4,7 @@ import { observer } from 'mobx-react';
 
 import './App.css';
 import { TimerControlPanel } from '../components/Timer';
-import { GameController } from '../Game';
+import { GameController } from '../app';
 
 @observer
 export class RefereePage extends React.Component<{ game: GameController }, {}> {

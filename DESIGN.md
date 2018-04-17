@@ -21,3 +21,7 @@ This allows the UI to be reusable.
 The UI and application should be connected by adapters or presenters.
 In `react-redux`, it is done by `mapStateToProps()` and `mapDispatchToProps()`
 
+For pages, since it is application specific, so I'm ok to have it accessing app classes and interfaces directly.
+
+For component specs, it is just for convenience.
+When the app classes gets bigger (which it shouldn't), the specs can create its own logic for testing.
