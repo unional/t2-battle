@@ -7,6 +7,7 @@ import { startMatchApp } from './startMatchApp';
 import { startRefereeApp } from './startRefereeApp';
 import registerServiceWorker from './registerServiceWorker';
 
+// Doing dumb routing there as I'm not working on the backend yet.
 if (!window.sessionStorage) {
   ReactDOM.render(
     <Error message='This application requires Web Storage to work. Please use a compatible browser' />,

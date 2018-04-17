@@ -4,11 +4,10 @@ import * as ReactDOM from 'react-dom';
 
 import { RefereePage } from './RefereePage'
 import { GameController } from './Game';
-function loadGame() {
-  const game = new GameController()
-  game.countDown = parseInt(localStorage.getItem('game/countDown') || '0', 10)
-  return game
-}
+
+/**
+ * This is the "main" logic of referee application.
+ */
 export function startRefereeApp() {
   const game = loadGame()
 
@@ -20,4 +19,10 @@ export function startRefereeApp() {
     <RefereePage game={game} />,
     document.getElementById('root') as HTMLElement
   );
+}
+
+function loadGame() {
+  const game = new GameController()
+  game.countDown = parseInt(localStorage.getItem('game/countDown') || '0', 10)
+  return game
 }
