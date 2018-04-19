@@ -3,7 +3,7 @@ import { observer } from 'mobx-react'
 
 import './ScoreBoard.css'
 import { Button } from '../Button'
-import { GameController } from '../../Game';
+import { GameController } from '../../app';
 
 export const ScoreBoard = observer(({ game }: { game: GameController }) => (
   <div>

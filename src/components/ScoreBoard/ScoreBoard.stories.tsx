@@ -4,7 +4,7 @@ import * as React from 'react'
 
 import { withTests } from '../../withTests'
 import { ScoreBoard } from './ScoreBoard'
-import { GameController } from '../../Game'
+import { GameController } from '../../app'
 
 storiesOf('ScoreBoard', module)
   .addDecorator(withTests('ScoreBoard'))
