@@ -6,12 +6,12 @@ import { TimerControlPanel } from './TimerControlPanel'
 import { GameController } from '../../app'
 import { Button } from '../Button';
 
-it('starts with start shown, pause and reset hidden', () => {
+it('starts with start and reset shown, pause hidden', () => {
   const { panel } = setupEnzyme(() => new GameController())
 
   t.equal(startButton(panel).prop('hidden'), false)
   t.equal(pauseButton(panel).prop('hidden'), true)
-  t.equal(resetButton(panel).prop('hidden'), true)
+  t.equal(resetButton(panel).prop('hidden'), false)
 })
 
 it('click start button starts timer', () => {
@@ -22,6 +22,16 @@ it('click start button starts timer', () => {
 
   t.equal(game.running, true)
 })
+
+it('when running, pause is shown, start and reset hidden', () => {
+  const { panel } = setupEnzyme(() => new GameController())
+  startButton(panel).simulate('click')
+
+  t.equal(startButton(panel).prop('hidden'), true)
+  t.equal(pauseButton(panel).prop('hidden'), false)
+  t.equal(resetButton(panel).prop('hidden'), true)
+})
+
 
 function startButton(panel): enzyme.ShallowWrapper<{
   [x: string]: any;

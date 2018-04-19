@@ -17,6 +17,6 @@ export const TimerControlPanel = observer(({ timer }: { timer: Timer }) => (
     <TimerDisplay countDown={timer.countDown} />
     <Button hidden={timer.running || timer.countDown <= 0} onClick={timer.start.bind(timer)}>{'Start Game'}</Button>
     <Button hidden={!timer.running || timer.countDown <= 0} onClick={timer.pause.bind(timer)}>{'Pause Game'}</Button>
-    <Button hidden={timer.running || timer.countDown > 0} onClick={timer.reset.bind(timer)}>{'Reset Game'}</Button>
+    <Button hidden={timer.running} onClick={timer.reset.bind(timer)}>{'Reset Game'}</Button>
   </div>
 ))
