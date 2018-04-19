@@ -6,7 +6,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --json --outputFile=.jest-test-results.json || true",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "node scripts/storybook.js",
     "build-storybook": "build-storybook"
   },
   "jest": {
