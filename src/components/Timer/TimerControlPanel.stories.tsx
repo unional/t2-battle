@@ -8,4 +8,9 @@ import { GameController } from '../../app'
 
 storiesOf('TimerControlPanel', module)
   .addDecorator(withTests('TimerControlPanel'))
-  .add('New Timer', () => (<TimerControlPanel timer={new GameController()} />))
+  .add('New timer', () => (<TimerControlPanel timer={new GameController()} />))
+  .add('In Kill Zone', () => {
+    const game = new GameController()
+    game.countDown = 120
+    return (<TimerControlPanel timer={game} />)
+  })
