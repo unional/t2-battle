@@ -32,7 +32,6 @@ it('when running, pause is shown, start and reset hidden', () => {
   t.equal(resetButton(panel).prop('hidden'), true)
 })
 
-
 function startButton(panel): enzyme.ShallowWrapper<{
   [x: string]: any;
   children: any;
