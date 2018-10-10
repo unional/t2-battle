@@ -10,7 +10,7 @@ import { GameController } from '../app';
 export class RefereePage extends React.Component<{ game: GameController }, {}> {
   public render() {
     return (
-      <div className='App'>
+      <div className='RefereeApp'>
         <label>Player 1:</label>
         <Input>{this.props.game.player1}</Input>
         <label>Player 2:</label>

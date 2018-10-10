@@ -22,7 +22,7 @@ export function startRefereeApp() {
 }
 
 function loadGame() {
-  const game = new GameController()
+  const game = new GameController(15 * 60)
   game.countDown = parseInt(localStorage.getItem('game/countDown') || '0', 10)
   return game
 }
